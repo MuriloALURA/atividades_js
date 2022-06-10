@@ -2,6 +2,8 @@
 
 let nome = "Murilo Alves, Pedro Silva, Edmarques Lima";
 
-let lista = nome.split(" ")
+function lista(x){
+    console.log(x.split(" "));
+}
 
-console.log(lista)
+lista(nome)
