@@ -1,25 +1,21 @@
 // EXERCÍCIO 8 - Crie um objeto literal pessoa com os atributos, nome e idade e métodos acessores e modificadores para os atributos citados.
 
-let a = {
-    Pessoa: function (nome,idade) {
-        this.nome = nome
-        this.idade = idade
-    },
-    get getNome() {
+const pessoa = {
+    nome: 'Murilo',
+    idade: 22,
+    get getNome(){
         return this.nome
     },
-    set getNome(x) {
-        this.nome = x
+    set getNome(nome){
+        this.nome = nome
     },
-    get getIdade() {
+    get getIdade(){
         return this.idade
     },
-    set getIdade(y) {
-        this.idade = y
-    },
-  };
+    set getIdade(idade){
+        this.idade = idade
+    }
+}
 
-a.getNome = "Rogerio"
-a.getIdade = "30"
-
-console.log(a)
+console.log(pessoa.getNome)
+console.log(pessoa.getIdade)
