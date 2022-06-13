@@ -1,5 +1,7 @@
 class funcionario{
     constructor (nome,dataContratacao){
+        nome = "Pedro";
+        dataContratacao = "20/03/2014";
         this.nome = nome
         this.dataContratacao = dataContratacao
     } 
@@ -21,6 +23,9 @@ class funcionario{
 class pf extends funcionario{
     constructor(nome,dataContratacao, cpf,salario,beneficios) {
         super(nome,dataContratacao)
+        cpf = "894.840.232-08";
+        salario = "R$3.000";
+        beneficios = "VR + VT";
         this.cpf = cpf
         this.salario = salario
         this.beneficios = beneficios     
@@ -35,7 +40,7 @@ class pf extends funcionario{
         return this.salario
     }
     set setSalario(d){
-        this.cpf= d
+        this.salario= d
     }
     get getBeneficios(){
         return this.beneficios
@@ -46,8 +51,10 @@ class pf extends funcionario{
     
 }
 class pj extends funcionario{
-    constructor(cnpj,salario) {
+    constructor(nome,dataContratacao, cpf,salario,beneficios,cnpj) {
         super(nome,dataContratacao, cpf,salario,beneficios)
+        cnpj = "09.354.272/0001-64";
+        salario = "R$3.000";
         this.cnpj = cnpj
         this.salario = salario
     }
@@ -59,17 +66,15 @@ class pj extends funcionario{
     }
 }
 
-let func = new funcionario();
+//let func = new funcionario();
+let junior = new pf();
+let pedro = new pj();
 
-func.nome = "Pedro"
-func.dataContratacao = "20/03/2014"
-func.cpf = "894.840.232-08"
-func.salario = "R$3.000"
-func.beneficios = "VR + VT"
-func.cnpj = "09.354.272/0001-64"
 
-//alterando valores
-func.setNome = "Murilo",
-func.salario = "R$4.500"
+//alterando valores (junior)
+junior.setNome = "Roberto", // <== Alteração do nome
+junior.setSalario = "R$4.500" // <== Alteração do salario
+junior.cpf = "382.947.932-04" // <== Alteração CPF
 
-console.log(func)
+
+console.log(pedro)
