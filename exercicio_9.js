@@ -77,4 +77,4 @@ junior.setSalario = "R$4.500" // <== Alteração do salario
 junior.cpf = "382.947.932-04" // <== Alteração CPF
 
 
-console.log(pedro)
+console.log(junior)
